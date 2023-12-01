@@ -1,0 +1,10 @@
+.box {
+    height: 200px;
+    width: 200px;
+    background-color : pink;
+    font-size: 30px;
+}
+.box span {
+    color: black;
+    font-size: 16px;
+}
