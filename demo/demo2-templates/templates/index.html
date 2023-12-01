@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+{#    三种导入静态文件的方式#}
+
+{#    <link rel="stylesheet" href="../static/index.css">#}
+{#    <link rel="stylesheet" href="/static/index.css">#}
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <h1>这是一个测试首页</h1>
+    <div class="box">
+        <span>name: {{ name }} </span>
+    </div>
+</body>
+</html>
