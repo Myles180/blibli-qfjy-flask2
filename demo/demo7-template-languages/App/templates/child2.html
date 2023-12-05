@@ -1,0 +1,39 @@
+{# 父模版 #}
+{% extends 'child1.html' %}
+<hr>
+
+{# super #}
+{% block head %}
+    {{ super() }}
+    <div>
+        <p>child2 test</p>
+    </div>
+    <hr>
+{% endblock %}
+
+{# super #}
+{% block content %}
+    {% include 'child2_include.html' %}
+    <div>
+        <p>flask content</p>
+    </div>
+    <hr>
+{% endblock %}
+
+{# 宏定义: Python函数 #}
+{% macro person(name, age) %}
+    <b>姓名: {{ name }}, 年龄: {{ age }}</b>
+{% endmacro %}
+
+{% block foot %}
+    {{ person("坤坤", 26) }}
+
+    {# 过滤器 #}
+    <p>{{ name | capitalize }}</p>
+    <p>{{ name | title }}</p>
+    <p>{{ name | upper }}</p>
+    <p>{{ name | upper | first | lower }}</p>
+    <p>{{ name2 | default('kunkun') }}</p>
+{% endblock %}
+
+
