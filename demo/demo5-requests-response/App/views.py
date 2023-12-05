@@ -64,7 +64,7 @@ def get_response():
     # return 'response OK!'
 
     # 2. 模板渲染 (前后端不分离)
-    # return render_template('index.html', name='张三', age=33)
+    # return render_template('home.html', name='张三', age=33)
 
     # 3. 返回json数据 (前后端分离)
     data = {'name': '李四', 'age': 44}
@@ -74,7 +74,7 @@ def get_response():
     # return jsonify(data)
 
     # 4. 自定义Response对象
-    html = render_template('index.html', name='张三', age=33)
+    html = render_template('home.html', name='张三', age=33)
     print(html, type(html))  # <class 'str'>
 
     # res = make_response(html, 200)

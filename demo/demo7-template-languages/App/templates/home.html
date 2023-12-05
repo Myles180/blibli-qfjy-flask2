@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/css/home.css">
+</head>
+<body>
+    <h2>Home</h2>
+    <hr>
+
+    {# 模版语音的注释#}
+    <h4>变量: </h4>
+    <p>name: {{ name }}</p>
+    <p>age: {{ age }}</p>
+    <p>likes: {{ likes }}</p>
+
+    <hr>
+    <h4>标签: </h4>
+    <h5>if语句</h5>
+    {% if age >= 18  %}
+        <p>{{ name }} 已经成年了</p>
+    {% elif age >= 6 %}
+        <p>{{ name }} 可以上小学了</p>
+    {% else %}
+        <p>{{ name }} 还是小孩</p>
+    {% endif %}
+
+    <h5>for循环</h5>
+    {% for like in likes  %}
+        {% if loop.first %}
+            <p class="red">{{ like }}</p>
+        {% elif loop.last %}
+            <p class="blue">{{ like }}</p>
+        {% else %}
+            {{ like }}
+        {% endif %}
+        <p>{{ like }}</p>
+
+        index: {{ loop.index }},
+        index0: {{ loop.index }},
+        revindex: {{ loop.revindex }},
+        revindex0: {{ loop.revindex0 }}
+
+        {% else %}
+            <b>else</b>
+    {% endfor %}
+
+
+</body>
+</html>
