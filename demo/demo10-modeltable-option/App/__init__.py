@@ -14,7 +14,7 @@ def create_app():
 
     # 配置数据库
     # db_uri = 'sqlite:///sqlite3.db'  # sqlite 配置
-    db_uri = 'mysql+pymysql://root:Ali%4012345@123.207.58.37:3306/flaskdb'  # mysql 配置
+    db_uri = 'mysql+pymysql://root:123@localhost:3306/flaskdb'  # mysql 配置
     app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
