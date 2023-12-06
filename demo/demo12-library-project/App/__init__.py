@@ -12,7 +12,7 @@ def create_app():
 
     # 配置数据库
     # db_uri = 'sqlite:///sqlite3.db'  # sqlite配置
-    db_uri = 'mysql+pymysql://root:Ali%4012345@123.207.58.37:3306/bookdb'  # mysql的配置
+    db_uri = 'mysql+pymysql://root:123@localhost:3306/bookdb'  # mysql的配置
     app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # 禁止对象追踪修改
 

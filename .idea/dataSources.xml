@@ -34,5 +34,12 @@
       <jdbc-url>jdbc:mysql://123.207.58.37:3306/bookdb</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="blogdb@123.207.58.37" uuid="2ddcf751-64d2-4aa3-aaeb-e1bda3cc5575">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://123.207.58.37:3306/blogdb</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
